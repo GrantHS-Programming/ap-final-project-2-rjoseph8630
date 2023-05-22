@@ -16,13 +16,13 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        float dirX = Input.GetAxis("Horizontal");
+        float dirX = Input.GetAxisRaw("Horizontal");
 
         rb.velocity = new Vector2(dirX * 5f, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(0, 10f);
+            rb.velocity = new Vector2(0, 5f);
         }
     }
 }
