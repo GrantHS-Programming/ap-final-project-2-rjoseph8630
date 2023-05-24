@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class levelGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    [SerializeField] private Transform Platform;
+    private void Awake()
     {
-        
+        Instantiate(Platform, new Vector3(13, 4), Quaternion.identity);
     }
 }
